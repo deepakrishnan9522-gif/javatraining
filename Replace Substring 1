@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String t1=s.nextLine();
+        String t2=s.nextLine();
+        int i=s.nextInt();
+        int j=s.nextInt();
+        StringBuilder a=new StringBuilder(t1);
+        a.replace(i,j,t2);
+        System.out.println(a);
+    }
+}
