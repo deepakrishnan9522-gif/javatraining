@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+
+    public class Main {
+
+    static String removeDuplicates(String str, String result) {
+       
+        if (str.length() == 0) {
+            return result;
+        }
+
+        char current = str.charAt(0);
+
+       
+        if (result.indexOf(current) == -1) {
+            result += current;
+        }
+
+        
+        return removeDuplicates(str.substring(1), result);
+    }
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String input =s.nextLine();
+        System.out.println(removeDuplicates(input, ""));
+    }
+}
+
+   
