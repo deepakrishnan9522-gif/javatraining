@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class Student {
+    String name;
+    int marks;
+
+    public Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public void displayGrade() {
+        String grade = "";
+        if (marks >= 90) {
+            grade = "Excellent";
+        } else if (marks >= 75) {
+            grade = "Good";
+        } else if (marks >= 50) {
+            grade = "Average";
+        } else {
+            grade = "Fail";
+        }
+        System.out.println("Name:" + name);
+        System.out.println("Grade:" + grade);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        if (s.hasNext()) {
+            String name = s.next();
+            if (s.hasNextInt()) {
+                int marks = s.nextInt();
+                Student sb= new Student(name, marks);
+                sb.displayGrade();
+            }
+        }
+       
+    }
+}
+
+
