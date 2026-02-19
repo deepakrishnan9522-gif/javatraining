@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+class Solution {
+    public static boolean Prime(int n) {
+        if (n <= 1) {
+            return false;
+        }
+        for (int i = 2;i<Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        
+        
+        if (Prime(n)) {
+            System.out.println("Prime");
+        } else {
+            System.out.println("Not Prime");
+        }
+    }
+}
