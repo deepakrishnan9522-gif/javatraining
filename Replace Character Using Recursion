@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static String replaceChar(String str, char oldChar, char newChar) {
+        return str.replace(oldChar, newChar);
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        if (!s.hasNextLine()) return;
+        String str = s.nextLine();
+
+        if (!s.hasNext()) return;
+        String oldCharStr = s.next();
+        if (oldCharStr.isEmpty()) return;
+        char oldChar = oldCharStr.charAt(0);
+
+        if (!s.hasNext()) return;
+        String newCharStr = s.next();
+        if (newCharStr.isEmpty()) return;
+        char newChar = newCharStr.charAt(0);
+        
+        
+        String modifiedStr = replaceChar(str, oldChar, newChar);
+        System.out.println(modifiedStr);
+    }
+}
